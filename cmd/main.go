@@ -1,9 +1,9 @@
 package main
 
 import (
-	"auth/auth"
-	"auth/getconf"
 	"net/http"
+	"origin-auth/auth"
+	"origin-auth/getconf"
 
 	"github.com/gorilla/mux"
 )

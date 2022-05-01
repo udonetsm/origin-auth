@@ -1,8 +1,8 @@
 package auth
 
 import (
-	"auth/db"
-	"auth/getconf"
+	"origin-auth/db"
+	"origin-auth/getconf"
 
 	"encoding/json"
 	"log"

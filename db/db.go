@@ -1,8 +1,8 @@
 package db
 
 import (
-	"auth/getconf"
 	"database/sql"
+	"origin-auth/getconf"
 
 	"github.com/udonetsm/help/helper"
 	"github.com/udonetsm/help/models"
@@ -17,7 +17,7 @@ func sqlDb() *sql.DB {
 	db.SetConnMaxIdleTime(5)
 	db.SetMaxIdleConns(5)
 	db.SetMaxOpenConns(6)
-	db.SetConnMaxLifetime(3)
+	db.SetConnMaxLifetime(6)
 	return db
 }
 

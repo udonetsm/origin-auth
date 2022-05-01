@@ -1,12 +1,12 @@
 package tests
 
 import (
-	"auth/auth"
 	"bytes"
 	"encoding/json"
 	"log"
 	"net/http"
 	"net/http/httptest"
+	"origin-auth/auth"
 	"testing"
 
 	"github.com/udonetsm/help/models"
