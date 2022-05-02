@@ -10,7 +10,8 @@ import (
 
 func Router() *mux.Router {
 	router := mux.NewRouter()
-	router.Handle("/authorize/", auth.Mdlwr(http.HandlerFunc(auth.Authorize))).Methods(http.MethodPost)
+	router.Handle("/authorize", auth.Mdlwr(http.HandlerFunc(auth.Authorize))).Methods(http.MethodPost)
+	router.Handle("/newuser", auth.Mdlwr(http.HandlerFunc(auth.NewUser))).Methods(http.MethodPost)
 	return router
 }
 

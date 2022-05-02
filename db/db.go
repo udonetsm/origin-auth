@@ -44,3 +44,16 @@ func Authentificate(auth models.Auth) (ok bool, user models.User) {
 	ok = false
 	return
 }
+
+func NewUser(user models.AUser) (models.User, error) {
+	sdb := sqlDb()
+	gdb := gormDb(sdb)
+	tx := gdb.Table("users").Create(&user.User)
+	if tx.Error == nil {
+		tx = gdb.Table("auth").Create(&user.Auth)
+		if tx.Error == nil {
+			return user.User, nil
+		}
+	}
+	return models.User{}, tx.Error
+}
